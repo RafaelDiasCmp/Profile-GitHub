@@ -9,11 +9,11 @@ function search() {
 
     $.getJSON(url, (user) => {
         showUserData(user);
-        if(isNew(user)){
+        if (isNew(user)) {
             save(user);
             showNewUserHistory(user);
         }
-        
+
         clearError();
 
     }).fail(() => {
@@ -24,7 +24,7 @@ function search() {
 
 }
 
-function save(user){
+function save(user) {
     usersHistory.push(user);
 }
 
